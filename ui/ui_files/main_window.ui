@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>954</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="InfoTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>954</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget_2">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Συλλογή</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="addDir">
+       <property name="text">
+        <string>Προσθήκη Καταλόγου..</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="MovieTable" name="tableView"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>InfoTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>infotabwidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>edit_item(QVariant)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>MovieTable</class>
+   <extends>QTableView</extends>
+   <header>movietable.h</header>
+   <slots>
+    <signal>edit_request(QVariant)</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>tableView</sender>
+   <signal>edit_request(QVariant)</signal>
+   <receiver>tabWidget</receiver>
+   <slot>edit_item(QVariant)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>518</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

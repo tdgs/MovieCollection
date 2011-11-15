@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>917</width>
+    <height>572</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="ImageLabel" name="poster">
+     <property name="text">
+      <string>POSTER</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::ExpandingFieldsGrow</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Βαθμ. IMDB</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QDoubleSpinBox" name="imdb_rating"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Βαθμ. Χρήστη</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDoubleSpinBox" name="custom_rating"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>Ημ. Κυκλοφορίας:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDateEdit" name="release_date"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Πρωταγωνιστούν:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="tagline">
+     <property name="text">
+      <string>Can't Stop the Flow</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="title">
+     <property name="styleSheet">
+      <string notr="true">font: 75 48pt &quot;Ubuntu&quot;;
+text-style: center;</string>
+     </property>
+     <property name="text">
+      <string>Serenity</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>title</zorder>
+  <zorder>poster</zorder>
+  <zorder>frame</zorder>
+  <zorder>label_7</zorder>
+  <zorder>tagline</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageLabel</class>
+   <extends>QLabel</extends>
+   <header>imagelabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
