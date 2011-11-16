@@ -24,12 +24,8 @@ class MainWindow < Qt::MainWindow
     dir_scanner = DirScanner.new(path)
     progress = ProgressDialog.new(self, 'Ανάγνωση Φακέλου', 100)
     progress.update(0, '0')
-    100.times do |i|
-      puts i
-      progress.update(i, i.to_s)
-      sleep(10)
-    end
-
+    dir_scanner.add_observer(progress)
+    dir_scanner.scan
     # progress = ProgressDialog.new('Εισαγωγή Στη Βάση Δεδομένων...', movies.count)
     # movies.each do |m|
     #   status = 0

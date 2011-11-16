@@ -17,9 +17,10 @@ class DirScanner
     @path.each do |e|
       return nil  if @canceled
       unless e == '..' or e == '.'
+        puts e
+        notify(e)
         movies << MovieSearcher.find_by_download(e)
         @status += 1
-        notify(e)
       end
     end
     return movies

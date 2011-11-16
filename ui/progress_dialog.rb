@@ -6,7 +6,7 @@ class ProgressDialog < Qt::ProgressDialog
     super(parent)
     self.maximum = max
     self.window_title = title
-    self.minimumDuration = 0 
+    self.minimumDuration = 0
   end
 
   def update(status, e)
